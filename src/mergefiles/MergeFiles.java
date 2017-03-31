@@ -54,7 +54,7 @@ public class MergeFiles {
                 String lines;
                                 
                 while((lines = buffer.readLine())!=null) {                
-                    System.out.println(lines);      
+                    //System.out.println(lines);      
                     myArray[index] = Integer.parseInt(lines);
                     index++;
                 }
@@ -124,7 +124,7 @@ public class MergeFiles {
             }
                      
             BufferedWriter writter =new BufferedWriter(new OutputStreamWriter(new FileOutputStream(FILENAME4,true), "utf-8"));
-            for(int i=0; i < myArray.length; i++){
+            for(int i= myArray.length -1; i > 0 ; i--){
                 writter.write(myArray[i]+ "\r\n");      
                 System.out.println(myArray[i]);
             }    
